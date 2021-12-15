@@ -1,0 +1,81 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
+local venyx = library.new("Aincrad Adventures - Shroudy#6666", 5013109572)
+
+
+local themes = {
+Background = Color3.fromRGB(24, 24, 24),
+Glow = Color3.fromRGB(0, 0, 0),
+Accent = Color3.fromRGB(10, 10, 10),
+LightContrast = Color3.fromRGB(20, 20, 20),
+DarkContrast = Color3.fromRGB(14, 14, 14),  
+TextColor = Color3.fromRGB(255, 255, 255)
+}
+
+
+local page1 = venyx:addPage("Race Skill", 5012544693)
+local section1 = page1:addSection("Select Skill Slot")
+local section2 = page1:addSection("Choose Skill")
+
+local SkillSlot = {
+    "RaceSkill1",
+    "RaceSkill2",
+    "RaceSkill3"
+}
+
+section1:addDropdown("Slot", SkillSlot, function(text)
+    getgenv().SkillSlot = text
+end)
+
+local Skill = {
+    "Shadowspikes",
+    "Shadowpool",
+    "Demonblast",
+    "Windclear",
+    "Tornado",
+    "Windentrapment",
+    "Sleepingflute",
+    "Soundblast",
+    "Soundleech",
+    "Roar",
+    "Heartswamp",
+    "Beasttransformation"
+}
+
+section2:addDropdown("Skill", Skill, function(text)
+    getgenv().Skill = text
+end)
+
+section2:addButton("Change!", function()
+    local args = {
+        [1] = getgenv().SkillSlot, 
+        [2] = getgenv().Skill
+    }
+    
+    game:GetService("ReplicatedStorage").Inventory.ChangeRaceToolbar:FireServer(unpack(args))
+end)
+
+local page2 = venyx:addPage("Sword", 5012544693)
+local section1 = page2:addSection("Select Sword")
+
+local Sword = {
+    "Starter Sword",
+    "Beserker",
+    "Anneal",
+    "Galatine",
+    "Repulser",
+    "Elucidator"
+}
+
+section1:addDropdown("Sword", Sword, function(text)
+    getgenv().Sword = text
+end)
+
+section1:addButton("Change!", function()
+    local args = {
+        [1] = getgenv().Sword,
+        [2] = "Sword",
+        [3] = "None"
+    }
+    
+    game:GetService("ReplicatedStorage").Inventory.EquipWeapon:FireServer(unpack(args))
+end)
