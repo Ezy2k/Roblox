@@ -37,7 +37,7 @@ local Skill = {
     "Soundblast",
     "Soundleech",
     "Roar",
-    "Heartswamp",
+    "Heartswap",
     "Beasttransformation"
 }
 
