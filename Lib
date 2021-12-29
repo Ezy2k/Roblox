@@ -150,7 +150,7 @@ lib.createWindow = function(title, name, draggable)
 	ContainerFrame.BackgroundTransparency = 1.000
 	ContainerFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	ContainerFrame.Position = UDim2.new(0.499127448, 0, 0.499993384, 0)
-	ContainerFrame.Size = UDim2.new(0, 525, 0, 329)
+	ContainerFrame.Size = UDim2.new(0, 700, 0, 700)
 	ContainerFrame.ZIndex = 2
 
 	local MainFrame = Instance.new("Frame")
