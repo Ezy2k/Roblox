@@ -231,7 +231,7 @@ lib.createWindow = function(title, name, draggable)
 
 	Watermark.Parent = mainframe
 	Watermark.Name = "Watermark"
-	Watermark.Text = "Aqua UI Library " .. tostring(ver)
+	Watermark.Text = ""
 	Watermark.BackgroundTransparency = 1
 	Watermark.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Watermark.Position = UDim2.new(0, 0, 0.932, 0)
